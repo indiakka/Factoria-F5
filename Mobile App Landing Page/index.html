@@ -1,120 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mobile App Landing Page</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css" crossorigin="anonymous">
 
-  </head>
-  <body>
- 
-    <header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mobile App Landing Page</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css" crossorigin="anonymous">
+</head>
+
+<body>
+  <header>
     <nav>
-      <a href="index.html"><img id='logo' src="/images/logo.svg" /></a>
-      <ul>
-        <li><a href="#">Description</a></li>
-        <li><a href="#">Features</a></li>
-        <li><a href="#">Screens</a></li>
-        <li><a href="#">Extra</a><span id="unicode">&#9207;</span>
+      <a href="index.html"><img id='logo' src="/Mobile App Landing Page/images/logo.svg" /></a>
+      <div class="enlaces-nav">
+        <a href="#">Description</a>
+        <a href="#">Features</a>
+        <a href="#">Screens</a>
+        <div id="menu">
+          <a id="extra" href="#">Extra<span id="unicode">&#9207;</span></a>
           <ul class='submenu'>
-          <li><a href="#">Article details</a></li>
-          <li><a href="#">Terms condition</a></li>
-          <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">Article details</a></li>
+            <li><a href="#">Terms condition</a></li>
+            <li><a href="#">Privacy policy</a></li>
           </ul>
-        </li>   
-        <li><button class='boton_nav'>Download</button></li>
-      </ul>
+        </div>
+      </div>
+      <button class='boton_nav'>Download</button></a>
     </nav>
-</header>
-<main>
+  </header>
+  <main>
     <section id="introduction">
-         <h1>Mobile App Landing Page</h1>
+      <h1>Mobile App Landing Page</h1>
       <p>
         Start focusing on your goals and get more things done with Sync mobile
         application. It's the first app to harness the power of social
         connections to help you stay focused and get organized
       </p>
-    <p>
-      <button class='boton_download'><i class="fa-brands fa-apple"></i>Download</button>
-      <button class='boton_download'><i class="fa-brands fa-google-play"></i>Download</button>
-     </section>
-      <img id="phone" src="/images/header-iphone.png" />
+      <p>
+        <button class='boton_download'><i class="fa-brands fa-apple"></i>Download</button>
+        <button class='boton_download'><i class="fa-brands fa-google-play fa-xs"></i>Download</button>
+    </section>
+    <img id="phone" src="/Mobile App Landing Page/images/header-iphone.png" />
     </p>
-  
-    <section id="icons">  
-      <div class="icons">
-        <ul>
-          <div><i class="fa-solid fa-users fa-2xl"></i><li>Identify Goals</li></div>
-     <div><i class="fa-solid fa-code fa-2xl"></i><li>Situation Analysis</li></div>
-      <div><i class="fa-solid fa-gear fa-2xl"></i><li>Task Settings</li></div>
-     <div><i class="fa-solid fa-comments fa-2xl"></i><li>Social Interaction</li></div>
-      <div><i class="fa-solid fa-rocket fa-2xl"></i><li>Get Things Done</li></div>
-      
-    </ul>
-  </div>
-  </section>
-        <section id="organize">
-    <div class="contenedor_pagina2_1">
-      <div class="columna1_1">
-        <img id="img_pag2_1" src="images/description-1-app.png">
-      </div>
-      <div class="columna1_2">
-        <h2>Organize Your Time And Start Getting Results</h2>
-        <p>
-          Sync is the first mobile app on the market to harness the power of
-          social connections to help you stop procrastinating and start getting
-          things done. Give it a try and see the changes right away.
-        </p>
-        <p>■ Analyse and evaluate your current status and productivity</p>
-        <p>■ Begin monitoring your day to day routine with Sync app</p>
-        <p>■ See the improved results in no more than a couple of weeks</p>
-        <button class='boton_download'>Lightbox</button>
-      </div>
-    </div>
 
+    <section id="icons">
+      <div class="icons_linea1">
+        <i class="fa-solid fa-users fa-2xl"></i>
+        <i class="fa-solid fa-code fa-2xl"></i>
+        <i class="fa-solid fa-gear fa-2xl"></i>
+        <i class="fa-solid fa-comments fa-2xl"></i>
+      </div>
+      <div id="descripcion_icono">
+        <p>Identify Goals</p>
+        <p>Situation Analysis</p>
+        <p>Task Settings</p>
+        <p>Social Interaction</p>
+      </div>
+      <div class="icon_linea2">
+        <i class="fa-solid fa-rocket fa-2xl"></i>
+      </div>
+      <div id='descripcion_icono2'>
+        <p>Get Things Done</p>
+      </div>
+    </section>
+    <section id="organize">
+      <div class="contenedor_pagina2_1">
+        <div class="columna1_1">
+          <img id="img_pag2_1" src="/Mobile App Landing Page/images/description-1-app.png">
+        </div>
+        <div class="columna1_2">
+          <h2>Organize Your Time And Start Getting Results</h2>
+          <p>
+            Sync is the first mobile app on the market to harness the power of
+            social connections to help you stop procrastinating and start getting
+            things done. Give it a try and see the changes right away.
+          </p>
+          <p>■ Analyse and evaluate your current status and productivity</p>
+          <p>■ Begin monitoring your day to day routine with Sync app</p>
+          <p>■ See the improved results in no more than a couple of weeks</p>
+          <button class='boton_download'>Lightbox</button>
+        </div>
+      </div>
+    </section>
+    <section id="contenedor_pagina2_2">
       <diV class="contenedor_pagina2_2">
-        
-    <div class="columna2_1">
-      <button class='boton_cuadrado'>Schedule</button>
-      <button class='cuadrado_blanco'>Tracking</button>
-      <button class='cuadrado_blanco'>Organize</button>
-  
-      <p>Schedule tasks to keep track of their completion. Sync provides multiple 
-        scheduling options including alarms and reminders.
-      </p>
-      <p>
-        You can always add new tasks or change the setting of existing one in your 
-        calendar view or the app control panel
-      </p>
-      <p>
-        It's easy to stay focused on your most important daily activities that will
-        get you closer to meeting your goals
-      </p>
-      <p>
-        Use phone reminders to free up your long term memory which will reduce stress  
-        and make your more productive
-      </p>
-      
-      <button class='boton_download'>Terms</button>
-      <button class='boton_reverse'>Privacy</button>
-    </div>
-    <div class="columna2_2">
-      <img id="img_pag2_2" src="images/description-2-app.png">
-    </div>
-  </div>
-  </section>
-    <div>
-      <p>Special Features</p>
-    </div>
-  </main>
-    <footer>
 
-    </footer>
-  </body>
+        <div class="columna2_1">
+          <div id="boton_organize">
+            <button class='boton_cuadrado'><i class="fa-regular fa-clock"></i> Schedule</button>
+            <button class='cuadrado_blanco'><i class="fa-solid fa-list"></i> Tracking</button>
+            <button class='cuadrado_blanco'><i class="fa-regular fa-calendar-days"></i> Organize</button>
+          </div>
+          <p>Schedule tasks to keep track of their completion. Sync provides multiple
+            scheduling options including alarms and reminders.
+          </p>
+          <div id="parrafos_tick">
+            <p><i class="fa-regular fa-square-check"></i> 
+              You can always add new tasks or change the setting of existing one in your
+              calendar view or the app control panel
+            </p>
+            <p><i class="fa-regular fa-square-check"></i> 
+              It's easy to stay focused on your most important daily activities that will
+              get you closer to meeting your goals
+            </p>
+            <p><i class="fa-regular fa-square-check"></i>
+              Use phone reminders to free up your long term memory which will reduce stress
+              and make your more productive
+            </p>
+          </div>
+          <button class='boton_download'>Terms</button>
+          <button class='boton_reverse'>Privacy</button>
+        </div>
+        <div class="columna2_2">
+          <img id="img_pag2_2" src="/Mobile App Landing Page/images/description-2-app.png">
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer>
+    <div id="contact">
+      <h3>Contact Info</h3>
+      <p><i class="fa-solid fa-location-dot"></i> 22 Innovation Street, CA, US</p>
+      <p><i class="fa-solid fa-envelope"></i> office@syncmobile.com</p>
+      <p><i class="fa-solid fa-phone"></i> +44 376 945 23</p>
+    </div>
+    <div id="terms">
+      <h3>Value Links</h3>
+      <p>Terms & Conditions</p>
+      <p>Privacy Policy</p>
+      <p>Article Details</p>
+    </div>
+    <div id="other">
+      <h3>Other Apps</h3>
+      <p>Scientific Calculator</p>
+      <p>Advanced Timer</p>
+      <p>Music Store</p>
+    </div>
+    <div id="redes">
+      <i class="fa-brands fa-facebook-f fa-xl"></i>
+      <i class="fa-brands fa-twitter fa-xl"></i>
+      <i class="fa-brands fa-pinterest-p fa-xl"></i>
+      <i class="fa-brands fa-instagram fa-xl"></i>
+    </div>
+    <p id="copyright">Copyright <i class="fa-regular fa-copyright"></i> 2020 Inovatik-All rights reserved</p>
+  </footer>
+</body>
+
 </html>
