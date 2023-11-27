@@ -1,0 +1,130 @@
+html {
+  background-image: url("https://img.freepik.com/premium-photo/silver-glitter-background_280388-3251.jpg?w=996");
+  font-family: "Quicksand", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+/*<------NAV------>*/
+nav {
+  font-size: 45px;
+  text-transform: uppercase;
+  margin-top: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+  background-image: url("https://media3.giphy.com/media/U3qYN8S0j3bpK/giphy.webp?cid=ecf05e47av4inh09cg6eq28zapnvr9jlpqpm8b48whw2rbq0&ep=v1_gifs_search&rid=giphy.webp&ct=g");
+  z-index: 1000;
+  font-weight: bold;
+  height: 100px;
+  color: gray;
+}
+
+button {
+  width: 200px;
+  height: 60px;
+  font-size: 30px;
+  border-radius: 20px;
+  background-image: url("https://img.freepik.com/premium-photo/silver-glitter-background_280388-3251.jpg?w=996");
+background-size:cover;
+}
+
+#inicio{
+   width: 250px;
+  height: 60px;
+  margin-left:-30px;
+}
+
+nav button:hover {
+  color: #ff556e;
+}
+
+nav button.activo {
+   color: gray;
+}
+
+
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  ul {
+    list-style: none;
+    padding: 200;
+    margin: 10;
+  }
+  
+  li {
+    display: inline;
+    margin-right: 20px;
+    font-weight: bold;
+  }
+
+  .img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+  main p {
+    font-size: 20px;
+    margin: 10px;
+    padding: 50px 70px;
+  }
+  h1 {
+    text-align: center;
+  color: gray;
+  text-shadow: 2px 1px 2px black;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-size: 60px;
+  }
+  footer {
+    margin-top: 20px;
+    margin-bottom: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    color: #d4d4d4;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    background-image: url("https://media3.giphy.com/media/U3qYN8S0j3bpK/giphy.webp?cid=ecf05e47av4inh09cg6eq28zapnvr9jlpqpm8b48whw2rbq0&ep=v1_gifs_search&rid=giphy.webp&ct=g");
+  }
+  
+  footer a {
+    color: #d4d4d4;
+    text-decoration: none;
+  }
+  
+  #Copyright {
+    margin-top: 10px;
+    margin-left: 15px;
+  }
+  
+  #redes {
+    margin-top: 10px;
+  }
+  
+  #redes i {
+    margin: 20px;
+    padding: 15px;
+    color: #d4d4d4;
+    text-align: center;
+  }
+  
+  #redes i:hover {
+    color: #ff556e;
+  }
+  

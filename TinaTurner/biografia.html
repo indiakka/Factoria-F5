@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="biografia.css" />
+    <title>Tina Turner</title>
+</head>
+
+<body>
+    <section>
+        <header>
+            <nav>
+                <a href="inicio.html">
+                    <button id="inicio">Inicio</button>
+                </a>
+                <a href="biografia.html">
+                    <button>Biografía</button>
+                </a>
+                <a href="discografia.html">
+                    <button>Discografía</button>
+                </a>
+            </nav>
+        </header>
+    </section>
+    <main>
+        <section class="inicio">
+            <div class="text">
+                <h1>Biografía</h1>
+                <div class="madre"> <!-- container principal -->
+                    <div class="hijas">
+                        <p>
+                            Tina Turner, cuyo nombre de nacimiento es Anna Mae Bullock, nació el 26 de noviembre de 1939
+                            en Nutbush, Tennessee, EE. UU. Es una cantante, compositora, bailarina y actriz icónica
+                            conocida por su poderosa voz y su energía en el escenario.
+                        </p>
+                        <p>Comenzó su carrera musical a una edad temprana, y en la década de 1950, conoció a Ike
+                            Turner, con quien formó una exitosa asociación musical y personal. Juntos, como "Ike & Tina
+                            Turner", lanzaron numerosos éxitos, como "River Deep - Mountain High" y "Proud Mary". Sin
+                            embargo, su relación fue tumultuosa, y Tina finalmente se separó de Ike en la década de 1970
+                            debido al abuso que sufría.
+                        </p>
+                        <p>Después de su separación, Tina Turner lanzó su carrera en solitario con álbumes como
+                            "Private Dancer", que incluía éxitos como "What's Love Got to Do with It" y "Better Be Good
+                            to Me". Su álbum y sencillos alcanzaron el éxito internacional, consolidando su estatus como
+                            una de las cantantes más destacadas de la música pop y rock.
+                        </p>
+                        <p> Además de su música, Tina Turner ha incursionado en la actuación, participando en películas
+                            como "Mad Max Beyond Thunderdome" junto a Mel Gibson. También escribió dos autobiografías,
+                            revelando detalles sobre su vida personal y su carrera.
+                        </p>
+                        <p> A lo largo de su carrera, ha recibido múltiples premios, incluidos varios Gramms y
+                            reconocimientos honoríficos por su contribución a la música. Tina Turner es admirada no solo
+                            por su talento vocal y su energía en el escenario, sino también por su fuerza y
+                            ​​resiliencia personal, convirtiéndose en un ícono de la música y un modelo a seguir para
+                            muchos.
+                        </p>
+                    </div>
+                    <div class="hijas">
+
+                        <img src="OIP2.jpg" width="400" height="300" alt="iMG TINA TUNER" />
+
+
+                        <img src="https://lastfm.freetls.fastly.net/i/u/avatar170s/a70c2a9e8280b63d54500ad8aaa61878"
+                            width="400" height="300" alt="IMG TINA TUNER">
+
+                    </div>
+                </div>
+        </section>
+    </main>
+    <footer>
+        <div id="Copyright">
+            <p>Copyright © TeamTurneras 2023. Todos los derechos reservados.</p>
+        </div>
+        <div id="redes">
+            <a href="#"><i class="fa-brands fa-facebook fa-xl"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter fa-xl"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram fa-xl"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+        </div>
+    </footer>
+    <script>
+        var url = window.location.href;
+        var botones = document.querySelectorAll('header button');
+
+        botones.forEach(function (boton) {
+            if (boton.parentNode.href === url) {
+                boton.classList.add('activo');
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
