@@ -17,17 +17,17 @@ console.log('Bienvenida al bootcamp de Sequoia de Factoría F5')
 //Ejercicio 2: Crea una variable por los siguientes tipos de dato: string, number, boolean, null, undefined, object, array e imprímelos en la consola.
 
 //Escribe tu código aquí
-let string: "hola"
+let cadena: "hola"
 let number = 2
 let boolean = true
-let nulo = null
-let undefined = undefined
+let nulo = null;
+let undefinido
 let object = {
         nombre:'Juana', edad:33
     }
 let array= ['platano','manzana']
     
-console.log(string)
+console.log(cadena)
 console.log(number)
 console.log(nulo)
 console.log(undefined)
