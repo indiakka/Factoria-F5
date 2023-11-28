@@ -30,7 +30,7 @@ let array= ['platano','manzana']
 console.log(cadena)
 console.log(number)
 console.log(nulo)
-console.log(undefined)
+console.log(undefinido)
 console.log(object)
 console.log(array)
 
