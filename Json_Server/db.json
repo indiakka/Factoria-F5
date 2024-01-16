@@ -1,0 +1,84 @@
+{
+    "estudiantes": [
+        {
+            "id": "1",
+            "nombre":"Maria",
+            "apellido":"Puertas",
+            "edad":"15",
+            "dirección":"Gran Via 12",
+            "curso": "3ºA"
+        },
+        {
+            "id":"2",
+            "nombre": "Mario",
+            "apellido": "Puerto",
+            "edad": "12",
+            "dirección": "Pozas 20",
+            "curso": "1ºB"
+        },
+        {
+            "id": "3",
+            "nombre": "Marta",
+            "apellido": "Cotas",
+            "edad": "14",
+            "dirección": "Gran Via 1",
+            "curso": "2ºC"
+        },
+        {
+            "id": "4",
+            "nombre": "Olga",
+            "apellido": "Risto",
+            "edad": "13",
+            "dirección": "Pozas 120",
+            "curso": "2ºB"
+        },
+        {
+            "id": "5",
+            "nombre": "Jose",
+            "apellido": "Ruedas",
+            "edad": "15",
+            "dirección": "Gran Via 4",
+            "curso": "3ºA"
+        },
+        {
+            "id": "6",
+            "nombre": "Lisa",
+            "apellido": "Huerto",
+            "edad": "12",
+            "dirección": "Pozas 120",
+            "curso": "1ºC"
+        },
+        {
+            "id": "7",
+            "nombre": "Carla",
+            "apellido": "Puesta",
+            "edad": "15",
+            "dirección": "Gran Via 48",
+            "curso": "3ºA"
+        },
+        {
+            "id": "8",
+            "nombre": "Raúl",
+            "apellido": "Sanchez",
+            "edad": "11",
+            "dirección": "Pozas 9",
+            "curso": "1ºB"
+        },
+        {
+            "id": "9",
+            "nombre": "Paco",
+            "apellido": "Porras",
+            "edad": "14",
+            "dirección": "Gran Via 65",
+            "curso": "2ºA"
+        },
+        {
+            "id": "10",
+            "nombre": "Pilar",
+            "apellido": "Lopez",
+            "edad": "12",
+            "dirección": "Pozas 90",
+            "curso": "1ºB"
+        }
+    ]
+}
