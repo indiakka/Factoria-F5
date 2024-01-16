@@ -1,0 +1,97 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: turquoise;
+    margin: 0;
+    padding: 0;
+    color: #147b8d;
+    display: flex;
+    min-height: 100vh;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 75%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+
+/* Estilos para el encabezado */
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+/* Estilos para la lista de Amiibos */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* Cuatro columnas de tamaño igual */
+    gap: 20px;
+    /* Espaciado entre las tarjetas */
+}
+
+/* Estilos para cada ítem de la lista */
+li {
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Estilos para los elementos Amiibo */
+.amiibo {
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+    background-color: darkcyan;
+    width: 100%;
+    max-width: 100%;
+    /* Ancho máximo para mejor manejo del contenido */
+    text-align: center;
+}
+
+.amiibo:hover {
+    transform: scale(1.05);
+}
+
+.amiibo img {
+    width: 100%;
+    /* Ancho de la imagen al 100% de la tarjeta */
+    height: auto;
+    border-radius: 4px 4px 0 0;
+}
+
+.amiibo-info {
+    padding: 15px;
+}
+
+.amiibo h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #154c86;
+}
+
+.amiibo p {
+    margin: 0;
+    color: #183236;
+}
