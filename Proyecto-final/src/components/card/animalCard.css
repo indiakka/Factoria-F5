@@ -8,7 +8,6 @@
   width: 100%;
   padding-top: 2em;
   padding-bottom: 2em;
-
   display: grid;
   grid-template-columns: repeat(3, 30%);
   justify-items: center;
@@ -16,7 +15,6 @@
   row-gap: 4em;
   align-items: center;
   justify-content: center;
-
   font-family: Manrope;
   padding-inline: 4em;
 }
@@ -31,6 +29,7 @@
   flex-direction: column;
   align-items: center;
   margin: 1em;
+  margin-top: 10%;
 }
 
 
