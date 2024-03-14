@@ -73,6 +73,10 @@
     width: 10%;
 }
 
+.casita-dropdown {
+    z-index: 999;
+}
+
 @media only screen and (max-width: 768px) {
     .navbar {
         width: 90%;
