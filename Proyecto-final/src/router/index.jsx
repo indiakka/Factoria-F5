@@ -2,8 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "../pages/Home";
 import Layout from "../layout/Layout";
 import Adoptar from "../pages/Adoptar";
-import AnimalInfo from "../pages/animalInfo/AnimalInfo";
-import Casita from "../components/casita/Casita";
+
 import Donar from "../pages/donar/Donar";
 import SobreNosotras from "../pages/sobreNosotras/SobreNosotras";
 import Contacto from "../pages/contacto/Contacto";

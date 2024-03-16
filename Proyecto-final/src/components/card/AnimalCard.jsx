@@ -1,7 +1,7 @@
 // AnimalCard.js
 import React, { useState } from 'react';
 import './animalCard.css';
-import AnimalInfo from '../../pages/animalInfo/AnimalInfo';
+import AnimalInfo from '../animalInfo/AnimalInfo';
 
 const AnimalCard = ( { animal } ) =>
 {
