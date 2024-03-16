@@ -23,10 +23,7 @@ export const router = createBrowserRouter( [ {
             path: "/adoptar",
             element: <Adoptar />
         },
-        {
-            path: `/animal-info/:id`,
-            element: <AnimalInfo />
-        },
+     
         {
             path: "/donar",
             element: <Donar />

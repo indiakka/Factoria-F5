@@ -1,90 +1,62 @@
-import axios from "axios";
-import { useEffect } from "react";
-import { useParams, useNavigate } from "react-router";
-import { useState } from "react";
+import React, { useState } from 'react';
 import "./animalInfo.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPaw } from '@fortawesome/free-solid-svg-icons';
-import { NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes, faPaw, faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 
-const AnimalInfo = () => {
-  const [animal, setAnimal] = useState([]);
-  const { id } = useParams();
-  const [animalesCasita, setAnimalesCasita] = useState([]);
-  const navigate = useNavigate()
+const AnimalInfo = ( { animal } ) =>
+{
+  const [ isOpen, setIsOpen ] = useState( true ); // Estado para controlar la visibilidad de la tarjeta
 
-  useEffect(() => {
-    const animalInfo = async () => {
-      const response = await axios.get(`http://localhost:3000/results/${id}`);
-      setAnimal(response.data);
-    };
-    animalInfo();
-  }, [id]);
-
-  const anadirAnimal = () => {
-    const listadoAnimales = [...animalesCasita, { ...animal, id: animal.id }];
-    setAnimalesCasita(listadoAnimales);
-    alert("Animal añadido a tu casita")
+  const handleClose = () =>
+  {
+    setIsOpen( false ); // Cambiar el estado para ocultar la tarjeta
   };
 
-  useEffect(() => {
-    const animalesAlmacenados = localStorage.getItem('animalesCasita');
-    if (animalesAlmacenados) {
-      setAnimalesCasita(JSON.parse(animalesAlmacenados));
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem('animalesCasita', JSON.stringify(animalesCasita));
-  }, [animalesCasita]);
-
-  const handleSubmit = async ( id ) =>
+  // Verificar si la tarjeta está abierta
+  if ( !isOpen )
   {
-    const conf = window.confirm( '¿Quieres realmente borrar este animal?' )
-    if ( conf )
-    {
-      await axios.delete( `http://localhost:3000/results/${id}` )
-      alert( 'Este animal ha sido borrado correctamente' )
-      navigate( '/adoptar' )
-    }
+    return null; // Si está cerrada, no renderizamos nada
   }
 
-
   return (
-    <div className="animalInfocontainer">
-      <div className="animalInfoImg--container">
-        <img
-          src={animal.imagen}
-          alt={animal.nombre}
-          className="animalInfo--img"
-        />
-      </div>
-      <div className="animalInfoTxt--container">
-        <h2>Información sobre {animal.nombre}</h2>
-        <p>Tipo: {animal.tipo}</p>
-        <p>Raza: {animal.raza}</p>
-        <p>Tamaño: {animal.tamaño}</p>
-        <p>Cuidados Especiales: {animal.cuidadosEspeciales}</p>
-        <p>Ubicación: {animal.ubicacion}</p>
-        <p>Años: {animal.años}</p>
-        <p>Gastos de Gestión: {animal.gastosDeGestion}</p>
-        <div className="container--button">
+    <div className="animalInfoOverlay">
+      <div className="animalInfocontainer">
+        <div className="animalInfoImg--container">
+          <img
+            src={animal.imagen}
+            alt={animal.nombre}
+            className="animalInfo--img"
+          />
+        </div>
+        <div className="animalInfoTxt--container">
+          <h2>Información sobre {animal.nombre}</h2>
+          <p>Tipo: {animal.tipo}</p>
+          <p>Raza: {animal.raza}</p>
+          <p>Tamaño: {animal.tamaño}</p>
+          <p>Cuidados Especiales: {animal.cuidadosEspeciales}</p>
+          <p>Ubicación: {animal.ubicacion}</p>
+          <p>Años: {animal.años}</p>
+          <p>Gastos de Gestión: {animal.gastosDeGestion}</p>
           <div className="container--button">
-            <button onClick={anadirAnimal} className="button-adopta btn--conoceme">
-              <FontAwesomeIcon icon={faPaw} />Conóceme</button>
+            <button className="button-adopta btn--conoceme">
+              <FontAwesomeIcon icon={faPaw} /> Conóceme
+            </button>
           </div>
         </div>
-      </div>
-      <div className="contenedor--botones--editar">
-        <NavLink to={`/editarInfo/${animal.id}`}>
-          <button className="botones--editar">
-            <img src="../src/assets/images/Edit.png" alt="editar" /></button>
-        </NavLink>
-        <button onClick={e => handleSubmit( animal.id )} className="botones--editar">
-          <img src="../src/assets/images/Delete.png" alt="borrar" /></button>
+        <div className="contenedor--botones--editar">
+          <div className='contenedor-cerrar-card' onClick={handleClose}>
+            <FontAwesomeIcon icon={faTimes} className='cerrar-card' />
+          </div>
+          <button onClick={handleClose} className="botones--editar">
+            <img src="../src/assets/images/Edit.png" alt="editar" />
+          </button>
+          <button onClick={handleClose} className="botones--editar">
+            <img src="../src/assets/images/Delete.png" alt="borrar" />
+          </button>
+        </div>
       </div>
     </div>
   );
 };
 
-export default AnimalInfo
+export default AnimalInfo;

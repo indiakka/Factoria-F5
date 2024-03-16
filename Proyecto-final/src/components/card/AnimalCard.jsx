@@ -1,11 +1,27 @@
-import "./animalCard.css";
-import { NavLink } from "react-router-dom";
+// AnimalCard.js
+import React, { useState } from 'react';
+import './animalCard.css';
+import AnimalInfo from '../../pages/animalInfo/AnimalInfo';
 
-const AnimalCard = ({ animal }) => {
+const AnimalCard = ( { animal } ) =>
+{
+  const [ isOpen, setIsOpen ] = useState( false );
+  const [ isHovered, setIsHovered ] = useState( false );
+
+  const handleToggleInfo = () =>
+  {
+    setIsOpen( !isOpen );
+  };
+
+  const handleHover = () =>
+  {
+    setIsHovered( !isHovered );
+  };
+
   return (
-    <div className="card">
+    <div className="card" onClick={handleToggleInfo} onMouseEnter={handleHover} onMouseLeave={handleHover}>
       <img src={animal.imagen} alt={animal.nombre} className="card--imagen" />
-      <div className="card--componentes">
+      <div className={`card--componentes ${isHovered ? 'hovered' : ''}`}>
         <div>
           <h2 className="card--componentes--nombre">{animal.nombre}</h2>
           <p className="card--componentes--descripcion">
@@ -13,16 +29,10 @@ const AnimalCard = ({ animal }) => {
           </p>
         </div>
         <div>
-          <NavLink to={`/animal-info/${animal.id}`}><button className="card--componentes--button">
-            <img
-              src="src/assets/images/iconoInfo.png"
-              alt="iconInfo"
-              className="card--componentes--icono"
-            />
-          </button>
-          </NavLink>
+          <img src="src/assets/images/iconoInfo.png" alt="iconInfo" className="card--componentes--icono" />
         </div>
       </div>
+      {isOpen && <AnimalInfo animal={animal} />} {/* Renderizar AnimalInfo solo si isOpen es true */}
     </div>
   );
 };
