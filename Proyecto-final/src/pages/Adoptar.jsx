@@ -1,78 +1,105 @@
-import { useEffect } from "react";
-import { useState } from "react"
-import AnimalCard from "../components/card/AnimalCard";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import Filter from "../components/filter/Filter";
+import AnimalCard from '../components/card/AnimalCard'
 
+const Adoptar = () =>
+{
+  const [ animales, setAnimales ] = useState( [] );
+  const [ filterCriteria, setFilterCriteria ] = useState( {} );
 
-const Adoptar = () => {
-  const [animales, setAnimales] = useState([]);
-  const [filterCriteria, setFilterCriteria] = useState({})
-  useEffect(() => {
-    const data = async () => {
-      const response = await axios.get("http://localhost:3000/results"
-      );
-      const info = await response.data;
-      setAnimales(info);
-      console.log(info)
-    }
-
-    data()
-  }, [])
-
-  const handleFilterChange = (category, value) => {
-    setFilterCriteria((prevFilterCriteria) => {
-      const updatedFilterCriteria = {
-        [category]: value,
+  useEffect( () =>
+  {
+    const fetchData = async () =>
+    {
+      try
+      {
+        const response = await axios.get( "http://localhost:3000/results" );
+        const info = response.data;
+        setAnimales( info );
+      } catch ( error )
+      {
+        console.error( "Error fetching data: ", error );
       }
-      //filter delete or basically checking if it null or empty string then myFilteredAnimals will be all animals
-      if (value === null || value === "") {
-        Object.keys(prevFilterCriteria).forEach((key) => {
-          updatedFilterCriteria[key] = null
-        })
-      } else {
-        //reset filters when new filter is clicked 
-        Object.keys(prevFilterCriteria).forEach((key) => {
-          if (key !== category) {
-            updatedFilterCriteria[key] = null
-          }
-        })
-      }
-      return updatedFilterCriteria
-    })
-  }
+    };
 
-  const filteredAnimales = animales.filter((animal) => {
-    if (filterCriteria.tipo && animal.tipo !== filterCriteria.tipo) {
-      return false
-    }
-    if (filterCriteria.tamano && animal.tamaño !== filterCriteria.tamano) {
-      return false
-    }
-    // Edad filter logic
-    if (filterCriteria.edad) {
-      const edad = animal.años
+    fetchData();
+  }, [] );
 
-      switch (filterCriteria.edad) {
-        case "Cachorrito":
-          return edad >= 0 && edad <= 1
-        case "Adulto":
-          return edad > 1 && edad < 5
-        default:
-          return true
-      }
+  // Función para reorganizar aleatoriamente el array de animales
+  const shuffleAnimals = ( array ) =>
+  {
+    let currentIndex = array.length;
+    let temporaryValue, randomIndex;
+
+    // Mientras haya elementos a mezclar
+    while ( 0 !== currentIndex )
+    {
+      // Selecciona un elemento restante
+      randomIndex = Math.floor( Math.random() * currentIndex );
+      currentIndex -= 1;
+
+      // Intercambia con el elemento actual
+      temporaryValue = array[ currentIndex ];
+      array[ currentIndex ] = array[ randomIndex ];
+      array[ randomIndex ] = temporaryValue;
     }
-    return true
-  })
+
+    return array;
+  };
+
+  // Renderizar animales filtrados y reorganizados aleatoriamente
+  const renderAnimals = () =>
+  {
+    let filteredAndShuffledAnimals = animales.filter( ( animal ) =>
+    {
+      if ( filterCriteria.tipo && animal.tipo !== filterCriteria.tipo )
+      {
+        return false;
+      }
+      if ( filterCriteria.tamano && animal.tamaño !== filterCriteria.tamano )
+      {
+        return false;
+      }
+      if ( filterCriteria.edad )
+      {
+        const edad = animal.años;
+        switch ( filterCriteria.edad )
+        {
+          case "Cachorrito":
+            return edad >= 0 && edad <= 1;
+          case "Adulto":
+            return edad > 1 && edad < 5;
+          default:
+            return true;
+        }
+      }
+      return true;
+    } );
+
+    // Reorganizar aleatoriamente los animales filtrados
+    filteredAndShuffledAnimals = shuffleAnimals( filteredAndShuffledAnimals );
+
+    return filteredAndShuffledAnimals.map( ( animal ) => (
+      <AnimalCard key={animal.id} animal={animal} />
+    ) );
+  };
+
+  // Manejar cambios en los filtros
+  const handleFilterChange = ( category, value ) =>
+  {
+    setFilterCriteria( ( prevFilterCriteria ) => ( {
+      ...prevFilterCriteria,
+      [ category ]: value
+    } ) );
+  };
 
   return (
     <>
       <Filter onClick={handleFilterChange} />
-      {filteredAnimales.map((animal) => (
-        <AnimalCard key={animal.id} animal={animal} />
-      ))}
+      {renderAnimals()}
     </>
-  )
-}
+  );
+};
 
-export default Adoptar
+export default Adoptar;
