@@ -53,28 +53,15 @@
 }
 
 .logo-container {
+    height: 17vh;
     display: flex;
     justify-content: center;
 }
-
 
 .casita-container {
     width: 80%;
     display: flex;
     justify-content: flex-end;
-}
-
-.casita {
-    width: 9%;
-    height: 9%;
-}
-
-.casita:hover {
-    width: 10%;
-}
-
-.casita-dropdown {
-    z-index: 999;
 }
 
 @media only screen and (max-width: 768px) {

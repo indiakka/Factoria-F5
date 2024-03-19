@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import "./navbar.css";
 import Logo from "../logo/Logo";
 import Casita from "../../casita/Casita";
+import LogoCasita from "../logoCasita/LogoCasita";
 
 const Navbar = ( { numeroAnimales } ) =>
 {
@@ -35,14 +36,14 @@ const Navbar = ( { numeroAnimales } ) =>
     <nav className="navbar-container">
       <div className="navbar">
         <div className="navlink-container">
-          <NavLink className="navlink" to="/sobreNosotras" id="active-link">
-            Sobre Nosotras
-          </NavLink>
           <NavLink className="navlink" to="/adoptar" id="active-link">
             Adoptar
           </NavLink>
           <NavLink className="navlink" to="/donar" id="active-link">
             Donar
+          </NavLink>
+          <NavLink className="navlink" to="/sobreNosotras" id="active-link">
+            Sobre Nosotras
           </NavLink>
           <div className="hamburger">☰</div>
         </div>
@@ -52,10 +53,7 @@ const Navbar = ( { numeroAnimales } ) =>
           </NavLink>
         </div>
         <div className="casita-container" ref={casitaRef}>
-          <img
-            className="casita"
-            alt="casita"
-            src="src\assets\images\casitaIcon.png"
+          <LogoCasita 
             onClick={toggleCasita}
           />
           {numeroAnimales > 0 && (
