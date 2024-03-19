@@ -1,0 +1,54 @@
+.paginacion {
+    position: absolute;
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 300px;
+}
+
+.paginacion button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: var(--text-color);
+    cursor: pointer;
+}
+
+.paginacion button:hover {
+    background-color: var(--main-color);
+}
+
+.paginacion .active {
+    background-color: var(--main-color-light);
+    color: #fff;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .paginacion {
+        position: absolute;
+        display: flex;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 500px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .paginacion {
+        position: absolute;
+        display: flex;
+        width: 5px;
+        left: 10%;
+        transform: translateX(-50%);
+        margin-top: 720px;
+    }
+         .anterior {
+             display: none;
+         }
+    
+         .siguiente {
+             display: none;
+         }
+}
