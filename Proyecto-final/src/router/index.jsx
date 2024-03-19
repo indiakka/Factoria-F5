@@ -7,6 +7,7 @@ import Donar from "../pages/donar/Donar";
 import SobreNosotras from "../pages/sobreNosotras/SobreNosotras";
 import Contacto from "../pages/contacto/Contacto";
 import EditarInfo from "../pages/editarInfo/editarInfo";
+import AnimalInfo from "../components/animalInfo/AnimalInfo";
 
 
 
@@ -22,7 +23,7 @@ export const router = createBrowserRouter( [ {
             path: "/adoptar",
             element: <Adoptar />
         },
-     
+
         {
             path: "/donar",
             element: <Donar />
@@ -37,8 +38,8 @@ export const router = createBrowserRouter( [ {
         },
         {
             path: "/editarInfo/:id",
-            element: <EditarInfo/>
-        }
+            element: <EditarInfo />
+        }, 
     ]
 }
 ] )

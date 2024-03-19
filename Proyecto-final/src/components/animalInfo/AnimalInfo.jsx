@@ -4,6 +4,7 @@ import "./animalInfo.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes, faPaw } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from "react-router-dom";
+import axios from 'axios';
 
 
 const AnimalInfo = ( { animal } ) =>
@@ -69,6 +70,7 @@ const AnimalInfo = ( { animal } ) =>
 
   return (
     <div className="animalInfoOverlay">
+      
       <div className="animalInfocontainer">
         <div className="animalInfoImg--container">
           <img
@@ -79,13 +81,13 @@ const AnimalInfo = ( { animal } ) =>
         </div>
         <div className="animalInfoTxt--container">
           <h2>Información sobre {animal.nombre}</h2>
-          <p>Tipo: {animal.tipo}</p>
-          <p>Raza: {animal.raza}</p>
-          <p>Tamaño: {animal.tamaño}</p>
-          <p>Cuidados Especiales: {animal.cuidadosEspeciales}</p>
-          <p>Ubicación: {animal.ubicacion}</p>
-          <p>Años: {animal.años}</p>
-          <p>Gastos de Gestión: {animal.gastosDeGestion}</p>
+          <p><strong>Tipo:</strong> {animal.tipo}</p>
+          <p><strong>Raza:</strong> {animal.raza}</p>
+          <p><strong>Tamaño:</strong> {animal.tamaño}</p>
+          <p><strong>Cuidados Especiales:</strong> {animal.cuidadosEspeciales}</p>
+          <p><strong>Ubicación:</strong> {animal.ubicacion}</p>
+          <p><strong>Años:</strong> {animal.años}</p>
+          <p><strong>Gastos de Gestión:</strong> {animal.gastosDeGestion}</p>
           <div className="container--button">
             <button onClick={anadirAnimal} className="button-adopta btn--conoceme">
               <FontAwesomeIcon icon={faPaw} /> Conóceme
