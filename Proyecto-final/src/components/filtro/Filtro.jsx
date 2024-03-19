@@ -1,15 +1,15 @@
 import { useState } from "react";
-import "./Filter.css";
+import "./Filtro.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown, faTrash } from "@fortawesome/free-solid-svg-icons";
 
-const Filter = ( { onClick } ) =>
+const Filtro = ( { onClick } ) =>
 {
     const [ isAnimalListOpen, setAnimalListOpen ] = useState( false );
     const [ isTamanoListOpen, setTamanoListOpen ] = useState( false );
     const [ isEdadListOpen, setEdadListOpen ] = useState( false );
 
-    // State for selected filters
+    // State for selected filtros
     const [ selectedAnimal, setSelectedAnimal ] = useState( null );
     const [ selectedTamano, setSelectedTamano ] = useState( null );
     const [ selectedEdad, setSelectedEdad ] = useState( null );
@@ -56,7 +56,7 @@ const Filter = ( { onClick } ) =>
         onClick( "edad", edad );
     };
 
-    const clearFilters = () =>
+    const clearFiltros = () =>
     {
         setSelectedAnimal( null );
         setSelectedTamano( null );
@@ -65,60 +65,60 @@ const Filter = ( { onClick } ) =>
     };
 
     return (
-        <div className="filter">
-            {/* Animal filter */}
-            <button className="filterField filterFieldRadiusLeft" onClick={toggleAnimal}>
+        <div className="filtro">
+            {/* Animal filtro */}
+            <button className="filtroField filtroFieldRadiusLeft" onClick={toggleAnimal}>
                 Animales {selectedAnimal && <span className="selected-option">{selectedAnimal}</span>} <FontAwesomeIcon icon={faCaretDown} />
                 {isAnimalListOpen ? (
-                    <ul className="filter-ul">
-                        <li className={`filter-li ${selectedAnimal === "Perro" ? "selected" : ""}`} onClick={() => handleAnimalClick( "Perro" )}>
+                    <ul className="filtro-ul">
+                        <li className={`filtro-li ${selectedAnimal === "Perro" ? "selected" : ""}`} onClick={() => handleAnimalClick( "Perro" )}>
                             Perros
                         </li>
-                        <li className={`filter-li ${selectedAnimal === "Gato" ? "selected" : ""}`} onClick={() => handleAnimalClick( "Gato" )}>
+                        <li className={`filtro-li ${selectedAnimal === "Gato" ? "selected" : ""}`} onClick={() => handleAnimalClick( "Gato" )}>
                             Gatos
                         </li>
                     </ul>
                 ) : null}
             </button>
 
-            {/* Tamaño filter */}
-            <button className="filterField" onClick={toggleTamano}>
+            {/* Tamaño filtro */}
+            <button className="filtroField" onClick={toggleTamano}>
                 Tamaño {selectedTamano && <span className="selected-option">{selectedTamano}</span>} <FontAwesomeIcon icon={faCaretDown} />
                 {isTamanoListOpen ? (
-                    <ul className="filter-ul">
-                        <li className={`filter-li ${selectedTamano === "Pequeño" ? "selected" : ""}`} onClick={() => handleTamanoClick( "Pequeño" )}>
+                    <ul className="filtro-ul">
+                        <li className={`filtro-li ${selectedTamano === "Pequeño" ? "selected" : ""}`} onClick={() => handleTamanoClick( "Pequeño" )}>
                             Pequeño
                         </li>
-                        <li className={`filter-li ${selectedTamano === "Mediano" ? "selected" : ""}`} onClick={() => handleTamanoClick( "Mediano" )}>
+                        <li className={`filtro-li ${selectedTamano === "Mediano" ? "selected" : ""}`} onClick={() => handleTamanoClick( "Mediano" )}>
                             Mediano
                         </li>
-                        <li className={`filter-li ${selectedTamano === "Grande" ? "selected" : ""}`} onClick={() => handleTamanoClick( "Grande" )}>
+                        <li className={`filtro-li ${selectedTamano === "Grande" ? "selected" : ""}`} onClick={() => handleTamanoClick( "Grande" )}>
                             Grande
                         </li>
                     </ul>
                 ) : null}
             </button>
 
-            {/* Edad filter */}
-            <button className="filterField" onClick={toggleEdad}>
+            {/* Edad filtro */}
+            <button className="filtroField" onClick={toggleEdad}>
                 Edad {selectedEdad && <span className="selected-option">{selectedEdad}</span>} <FontAwesomeIcon icon={faCaretDown} />
                 {isEdadListOpen ? (
-                    <ul className="filter-ul">
-                        <li className={`filter-li ${selectedEdad === "Cachorrito" ? "selected" : ""}`} onClick={() => handleEdadClick( "Cachorrito" )}>
+                    <ul className="filtro-ul">
+                        <li className={`filtro-li ${selectedEdad === "Cachorrito" ? "selected" : ""}`} onClick={() => handleEdadClick( "Cachorrito" )}>
                             Cachorrito
                         </li>
-                        <li className={`filter-li ${selectedEdad === "Adulto" ? "selected" : ""}`} onClick={() => handleEdadClick( "Adulto" )}>
+                        <li className={`filtro-li ${selectedEdad === "Adulto" ? "selected" : ""}`} onClick={() => handleEdadClick( "Adulto" )}>
                             Adulto
                         </li>
                     </ul>
                 ) : null}
             </button>
-            {/* Delete Filter */}
-            <button className="filterField filterFieldRadiusRight" onClick={clearFilters}>
+            {/* Delete Filtro */}
+            <button className="filtroField filtroFieldRadiusRight" onClick={clearFiltros}>
                 Borrar filtros <FontAwesomeIcon icon={faTrash} />
             </button>
         </div>
     );
 };
 
-export default Filter;
+export default Filtro;

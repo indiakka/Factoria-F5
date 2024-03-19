@@ -1,7 +1,7 @@
 @import "src/variables-css/variables.css";
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
-.filter {
+.filtro {
     width: 94%;
     display: flex;
     flex-direction: row;
@@ -15,7 +15,7 @@
 
 }
 
-.filterField {
+.filtroField {
     width: 25%;
     color: var(--text-color);
     background-color: transparent;
@@ -31,43 +31,43 @@
     border: none;
 }
 
-.filterField:focus,
-.filterField:active {
+.filtroField:focus,
+.filtroField:active {
     color: var(--main-color);
 }
 
-.filterField ul {
+.filtroField ul {
     color: var(--text-color);
 }
 
-.filterField:nth-of-type(1) {
+.filtroField:nth-of-type(1) {
     border-right: 2px solid var(--text-color);
 }
 
-.filterField:nth-of-type(2) {
+.filtroField:nth-of-type(2) {
     border-right: 2px solid var(--text-color);
 }
 
-.filterField:nth-of-type(3) {
+.filtroField:nth-of-type(3) {
     border-right: 2px solid var(--text-color);
 }
 
 
-.filterField:hover {
+.filtroField:hover {
     background: var(--main-color-light);
 }
 
-.filterFieldRadiusLeft:hover {
+.filtroFieldRadiusLeft:hover {
     border-start-start-radius: 18px;
     border-end-start-radius: 18px;
 }
 
-.filterFieldRadiusRight:hover {
+.filtroFieldRadiusRight:hover {
     border-start-end-radius: 18px;
     border-end-end-radius: 18px;
 }
 
-.filter-ul {
+.filtro-ul {
     width: 75%;
     list-style: none;
     padding: 0;
@@ -94,7 +94,7 @@ li:hover {
 
 /* @media tablet */
 @media only screen and (max-width: 768px) {
-    .filter {
+    .filtro {
         grid-column-start: 1;
         grid-column-end: 3;
     }
@@ -102,7 +102,7 @@ li:hover {
 
 /* @media móvil */
 @media only screen and (max-width: 360px) {
-    .filter {
+    .filtro {
         grid-column-start: 1;
         grid-column-end: 2;
     }
