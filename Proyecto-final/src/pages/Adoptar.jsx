@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Filtro from "../components/filtro/Filtro";
-import AnimalCard from '../components/card/AnimalCard';
+import TarjetaAnimal from '../components/tarjeta/TarjetaAnimal';
 import Paginacion from "../components/pagination/Paginacion";
 
 const Adoptar = () =>
@@ -114,7 +114,7 @@ const Adoptar = () =>
     <>
       <Filtro onClick={manejarCambioFiltro} />
       {elementosActuales.map( ( animal ) => (
-        <AnimalCard key={animal.id} animal={animal} />
+        <TarjetaAnimal key={animal.id} animal={animal} />
       ) )}
       <div className="paginacion">
         <Paginacion

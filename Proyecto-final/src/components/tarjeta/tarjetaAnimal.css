@@ -4,7 +4,7 @@
 }
 
 
-.style-adoptar {
+.estilo-adoptar {
   width: 100%;
   padding-top: 2em;
   padding-bottom: 2em;
@@ -20,7 +20,7 @@
 }
 
 
-.card {
+.tarjeta {
   width: 80%;
   height: 100%;
   border-radius: 5px;
@@ -33,7 +33,7 @@
   cursor: pointer;
 }
 
-.card--componentes {
+.tarjeta--componentes {
   color: var(--text-color);
   width: 100%;
   display: flex;
@@ -43,15 +43,15 @@
   padding-left: 2em;
 }
 
-.card:hover {
+.tarjeta:hover {
   background-color: var(--main-color-light);
 }
 
-.card--componentes.hovered {
+.tarjeta--componentes.hovered {
   color: var(--main-color);
 }
 
-.card--componentes--nombre {
+.tarjeta--componentes--nombre {
   text-align: left;
   color: var(--text-color);
   align-self: self-start;
@@ -59,7 +59,7 @@
 
 
 
-.card--imagen {
+.tarjeta--imagen {
   height: 400px;
   width: 90%;
   object-fit: cover;
@@ -68,14 +68,14 @@
   padding: 1em;
 }
 
-.card--componentes--button {
+.tarjeta--componentes--button {
   display: flex;
   justify-content: center;
   border: none;
   background-color: rgba(255, 255, 255, 0);
 }
 
-.card--componentes--icono {
+.tarjeta--componentes--icono {
   width: 4rem;
   cursor: pointer;
   padding-right: 2em;
@@ -85,29 +85,29 @@
 
 /* @media tablet */
 @media only screen and (max-width: 768px) {
-  .style-adoptar {
+  .estilo-adoptar {
     grid-template-columns: repeat(2, 48%);
     column-gap: 0.5em;
     row-gap: 1.5em;
   }
 
-  .card:hover {
+  .tarjeta:hover {
     background-color: inherit;
   }
 
-  .card--componentes--icono {
+  .tarjeta--componentes--icono {
     width: 40px;
   }
 }
 
 /* @media móvil */
 @media only screen and (max-width: 360px) {
-  .style-adoptar {
+  .estilo-adoptar {
     grid-template-columns: 99%;
     row-gap: 1.5em;
   }
 
-  .card:hover {
+  .tarjeta:hover {
     background-color: inherit;
   }
 }

@@ -1,4 +1,4 @@
-.contenedor-casita-card {
+.contenedor-casita-tarjeta {
     position: absolute;
     top: 14%;
     right: 3%;
@@ -12,7 +12,7 @@
     background-color: #FFF
 }
 
-.casita-card {
+.casita-tarjeta {
     border-radius: 3%;
     width: 85%;
     border: 2px solid var(--text-color);
@@ -50,12 +50,12 @@ h5 {
     cursor: pointer;
 }
 
-.contenedor-x-card {
+.contenedor-x-tarjeta {
     display: flex;
     justify-content: flex-end;
 }
 
-.x-card {
+.x-tarjeta {
     width: 11%;
     margin: 7px;
     cursor: pointer;
@@ -63,18 +63,19 @@ h5 {
 }
 
 @media only screen and (max-width: 768px) {
-    .contenedor-casita-card {
+    .contenedor-casita-tarjeta {
         width: 20%;
         margin-top: 5px;
         right: 8%;
     }
 }
+
 @media only screen and (max-width: 480px) {
-    .contenedor-casita-card {
+    .contenedor-casita-tarjeta {
         width: 90%;
         margin: auto;
         top: 150px;
         right: 0;
-        left:0;
+        left: 0;
     }
 }

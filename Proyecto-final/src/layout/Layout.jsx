@@ -4,12 +4,13 @@ import Footer from "../components/footer/Footer"
 import './layout.css'
 
 
-const Layout = () => {
+const Layout = () =>
+{
     const location = useLocation();
     const classes = {
-        "/adoptar": "style-adoptar",
+        "/adoptar": "estilo-adoptar",
     }
-    const claseActual = classes[location.pathname];
+    const claseActual = classes[ location.pathname ];
     return (
         <>
             <Navbar />
