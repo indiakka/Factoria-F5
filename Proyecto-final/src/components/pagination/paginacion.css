@@ -4,6 +4,7 @@
     left: 50%;
     transform: translateX(-50%);
     margin-top: 300px;
+    z-index: 1;
 }
 
 .paginacion button {
@@ -44,11 +45,12 @@
         transform: translateX(-50%);
         margin-top: 720px;
     }
-         .anterior {
-             display: none;
-         }
-    
-         .siguiente {
-             display: none;
-         }
+
+    .anterior {
+        display: none;
+    }
+
+    .siguiente {
+        display: none;
+    }
 }

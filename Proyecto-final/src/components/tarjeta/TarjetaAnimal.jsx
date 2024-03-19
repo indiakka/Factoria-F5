@@ -1,8 +1,6 @@
-// TarjetaAnimal.js
 import React, { useState } from 'react';
-import './TarjetaAnimal.css';
+import './tarjetaAnimal.css';
 import AnimalInfo from '../animalInfo/AnimalInfo';
-import Paginacion from '../pagination/Paginacion'; // Importa el componente de paginación
 
 const TarjetaAnimal = ( { animal } ) =>
 {
@@ -37,7 +35,7 @@ const TarjetaAnimal = ( { animal } ) =>
         </div>
       </div>
       {estaAbierto && <AnimalInfo animal={animal} />} {/* Renderizar AnimalInfo solo si estáAbierto es true */}
-      {mostrarPaginacion && <Paginacion />} {/* Renderizar la paginación solo si mostrarPaginacion es true */}
+
     </div>
   );
 };
