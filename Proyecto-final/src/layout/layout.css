@@ -1,4 +1,3 @@
-@import "src/variables-css/variables.css";
 
 * {
     font-family: var(--fuente-principal);
