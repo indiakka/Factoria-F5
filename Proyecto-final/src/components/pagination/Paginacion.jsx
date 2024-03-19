@@ -11,10 +11,10 @@ const Paginacion = ( { totalItems, itemsPorPagina, paginaActual, alCambiarPagina
 
     const renderizarBoteonesPaginacion = () =>
     {
-        const buttons = [];
+        const botones = [];
         for ( let i = 1; i <= totalPaginas; i++ )
         {
-            buttons.push(
+            botones.push(
                 <button
                     key={i}
                     onClick={() => manejoCambioPagina( i )}
@@ -24,7 +24,7 @@ const Paginacion = ( { totalItems, itemsPorPagina, paginaActual, alCambiarPagina
                 </button>
             );
         }
-        return buttons;
+        return botones;
     };
 
     return (
