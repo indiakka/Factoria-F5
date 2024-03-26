@@ -107,9 +107,11 @@ const Adoptar = () => {
   return (
     <>
       <Filtro onClick={manejarCambioFiltro} onClearFilters={borrarFiltros} />
+      <div className="tarjetas">
       {elementosActuales.map((animal) => (
         <TarjetaAnimal key={animal.id} animal={animal} />
       ))}
+      </div>
       <div className="paginacion">
         <Paginacion
           totalItems={animalesFiltradosYMezclados.length}

@@ -70,7 +70,7 @@ const AnimalInfo = ( { animal } ) =>
 
   return (
     <div className="animalInfoOverlay">
-      
+
       <div className="animalInfocontainer">
         <div className="animalInfoImg--container">
           <img
@@ -83,10 +83,10 @@ const AnimalInfo = ( { animal } ) =>
           <h2>Información sobre {animal.nombre}</h2>
           <p><strong>Tipo:</strong> {animal.tipo}</p>
           <p><strong>Raza:</strong> {animal.raza}</p>
-          <p><strong>Tamaño:</strong> {animal.tamaño}</p>
+          <p><strong>Tamaño:</strong> {animal.tamano}</p>
           <p><strong>Cuidados Especiales:</strong> {animal.cuidadosEspeciales}</p>
           <p><strong>Ubicación:</strong> {animal.ubicacion}</p>
-          <p><strong>Años:</strong> {animal.años}</p>
+          <p><strong>Edad:</strong> {animal.edad}</p>
           <p><strong>Gastos de Gestión:</strong> {animal.gastosDeGestion}</p>
           <div className="container--button">
             <button onClick={anadirAnimal} className="button-adopta btn--conoceme">

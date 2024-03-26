@@ -27,7 +27,7 @@ const TarjetaAnimal = ( { animal } ) =>
         <div>
           <h2 className="tarjeta--componentes--nombre">{animal.nombre}</h2>
           <p className="tarjeta--componentes--descripcion">
-            Edad: {animal.años}, {animal.raza}, {animal.ubicacion}.
+            <strong>Edad:</strong> {animal.edad} <br /> <strong>Raza:</strong> {animal.raza} <br /> <strong>Ubicación:</strong> {animal.ubicacion}
           </p>
         </div>
         <div>
