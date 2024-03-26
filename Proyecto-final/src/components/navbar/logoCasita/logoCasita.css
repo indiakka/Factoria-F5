@@ -1,7 +1,7 @@
 .casita {
     width: 9%;
     height: 9%;
-    stroke: var(--main-color);
+    stroke: var(--color-principal);
 }
 
 .casita:hover {

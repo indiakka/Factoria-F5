@@ -4,8 +4,8 @@
     margin: auto;
     padding: 0;
     display: block;
-    stroke: var(--main-color);
-    fill: var(--main-color);
+    stroke: var(--color-principal);
+    fill: var(--color-principal);
 }
 
 .logo:hover {

@@ -8,13 +8,13 @@
     border: 2px solid;
     margin: 2rem 12rem;
     border-radius: 5px;
-    color: var(--text-color);
+    color: var(--color-texto);
 }
 
 .campoFiltro {
     width: 25%;
     height: 7vh;
-    color: var(--text-color);
+    color: var(--color-texto);
     background-color: transparent;
     font-family: Manrope;
     font-size: 20px;
@@ -30,27 +30,27 @@
 
 .campoFiltro:focus,
 .campoFiltro:active {
-    color: var(--main-color);
+    color: var(--color-principal);
 }
 
 .campoFiltro ul {
-    color: var(--text-color);
+    color: var(--color-texto);
 }
 
 .campoFiltro:nth-of-type(1) {
-    border-right: 2px solid var(--text-color);
+    border-right: 2px solid var(--color-texto);
 }
 
 .campoFiltro:nth-of-type(2) {
-    border-right: 2px solid var(--text-color);
+    border-right: 2px solid var(--color-texto);
 }
 
 .campoFiltro:nth-of-type(3) {
-    border-right: 2px solid var(--text-color);
+    border-right: 2px solid var(--color-texto);
 }
 
 .campoFiltro:hover {
-    background: var(--main-color-light);
+    background: var(--color-principal-claro);
 }
 
 

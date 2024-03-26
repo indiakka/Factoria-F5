@@ -36,7 +36,7 @@
 }
 
 .tarjeta--componentes {
-  color: var(--text-color);
+  color: var(--color-texto);
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -46,20 +46,20 @@
 }
 
 .tarjeta:hover {
-  border-color: var(--main-color-light);
-  color: var(--main-color-light);
+  border-color: var(--color-principal-claro);
+  color: var(--color-principal-claro);
   transition: all 0.3s ease-in-out;
 }
 
 .tarjeta:hover .animalInfoTxt--container,
 .tarjeta:hover .tarjeta--componentes--nombre,
 .tarjeta:hover .tarjeta--componentes--descripcion strong {
-  color: var(--main-color-light);
+  color: var(--color-principal-claro);
 }
 
 .tarjeta--componentes--nombre {
   text-align: left;
-  color: var(--text-color);
+  color: var(--color-texto);
   align-self: self-start;
 }
 
