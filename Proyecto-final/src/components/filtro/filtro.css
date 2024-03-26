@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 .filtro {
-    width: 94%;
+    width: 74%;
+    height: 7vh;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -10,63 +11,62 @@
     color: var(--text-color);
     grid-column-start: 1;
     grid-column-end: 4;
-    /*     position: relative; */
-
+    text-align: center;
 }
 
-.filtroField {
+.campoFiltro {
     width: 25%;
+    height: 7vh;
     color: var(--text-color);
     background-color: transparent;
     font-family: Manrope;
-    font-size: calc(10px + (30 - 4) * ((100vw - 368px) / (1920 - 368)));
+    font-size: 20px;
     font-weight: bold;
     margin: 0;
-    padding: 1em 0% 1em 0%;
     padding-inline: 0.5em;
     cursor: pointer;
     transition: color 0.5s;
     position: relative;
     border: none;
+    align-self: center;
 }
 
-.filtroField:focus,
-.filtroField:active {
+.campoFiltro:focus,
+.campoFiltro:active {
     color: var(--main-color);
 }
 
-.filtroField ul {
+.campoFiltro ul {
     color: var(--text-color);
 }
 
-.filtroField:nth-of-type(1) {
+.campoFiltro:nth-of-type(1) {
     border-right: 2px solid var(--text-color);
 }
 
-.filtroField:nth-of-type(2) {
+.campoFiltro:nth-of-type(2) {
     border-right: 2px solid var(--text-color);
 }
 
-.filtroField:nth-of-type(3) {
+.campoFiltro:nth-of-type(3) {
     border-right: 2px solid var(--text-color);
 }
 
-
-.filtroField:hover {
+.campoFiltro:hover {
     background: var(--main-color-light);
 }
 
-.filtroFieldRadiusLeft:hover {
+.campoFiltroRadioIzquierda:hover {
     border-start-start-radius: 18px;
     border-end-start-radius: 18px;
 }
 
-.filtroFieldRadiusRight:hover {
+.campoFiltroRadioDerecha:hover {
     border-start-end-radius: 18px;
     border-end-end-radius: 18px;
 }
 
-.filtro-ul {
+.listaFiltro {
     width: 75%;
     list-style: none;
     padding: 0;
@@ -79,19 +79,22 @@
     background-color: white;
 }
 
-.selected-option {
+.opcionSeleccionada {
     margin-left: 5px;
     font-weight: bold;
     color: rgb(92, 88, 88);
     font-size: 20px;
 }
 
-
-li:hover {
-    background-color: var(--main-color-light);
+.elementoListaFiltro:hover {
+    background-color: rgb(215, 188, 236);
 }
 
-/* @media tablet */
+.iconoPapelera {
+    margin: 0 10px;
+}
+
+/* Media Queries */
 @media only screen and (max-width: 768px) {
     .filtro {
         grid-column-start: 1;
@@ -99,7 +102,6 @@ li:hover {
     }
 }
 
-/* @media móvil */
 @media only screen and (max-width: 360px) {
     .filtro {
         grid-column-start: 1;
