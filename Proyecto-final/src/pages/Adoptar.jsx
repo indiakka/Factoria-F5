@@ -9,7 +9,7 @@ const Adoptar = () => {
   const [animalesFiltradosYMezclados, setAnimalesFiltradosYMezclados] = useState([]);
   const [criteriosFiltro, setCriteriosFiltro] = useState({ tipo: [], tamano: [], edad: [] });
   const [paginaActual, setPaginaActual] = useState(1);
-  const elementosPorPagina = 3;
+  const elementosPorPagina = 6;
 
   useEffect(() => {
     const fetchData = async () => {

@@ -8,9 +8,9 @@ const Filtro = ({ onClick, onClearFilters }) => {
   const [estaListaTamanosAbierta, setEstaListaTamanosAbierta] = useState(false);
   const [estaListaEdadesAbierta, setEstaListaEdadesAbierta] = useState(false);
 
-  const [especiesSeleccionadas, setEspeciesSeleccionadas] = useState([]);
-  const [tamanosSeleccionados, setTamanosSeleccionados] = useState([]);
-  const [edadesSeleccionadas, setEdadesSeleccionadas] = useState([]);
+  const [especieSeleccionada, setEspeciesSeleccionadas] = useState([]);
+  const [tamanoSeleccionado, setTamanoSeleccionado] = useState([]);
+  const [edadSeleccionada, setEdadSeleccionada] = useState([]);
 
   const alternarListaAnimales = () => {
     setEstaListaAnimalesAbierta(!estaListaAnimalesAbierta);
@@ -31,27 +31,27 @@ const Filtro = ({ onClick, onClearFilters }) => {
   };
 
   const manejarClicAnimal = (tipo) => {
-    console.log('Animal seleccionado:', tipo);
+    console.log('Especie seleccionada:', tipo);
     setEspeciesSeleccionadas(tipo);
     onClick('tipo', [tipo]);
   };
 
   const manejarClicTamano = (tamano) => {
     console.log('Tamaño seleccionado:', tamano);
-    setTamanosSeleccionados(tamano);
+    setTamanoSeleccionado(tamano);
     onClick('tamano', [tamano]);
   };
 
   const manejarClicEdad = (edad) => {
     console.log('Edad seleccionada:', edad);
-    setEdadesSeleccionadas(edad);
+    setEdadSeleccionada(edad);
     onClick('edad', [edad]);
   };
 
   const borrarFiltros = () => {
     setEspeciesSeleccionadas([]);
-    setTamanosSeleccionados([]);
-    setEdadesSeleccionadas([]);
+    setTamanoSeleccionado([]);
+    setEdadSeleccionada([]);
     if (typeof onClearFilters === 'function') {
       onClearFilters();
     }
@@ -61,18 +61,18 @@ const Filtro = ({ onClick, onClearFilters }) => {
     <div className="filtro">
       {/* Filtro de animales */}
       <button className="campoFiltro campoFiltroRadioIzquierda" onClick={alternarListaAnimales}>
-        Especies {especiesSeleccionadas && <span className="opcionSeleccionada">{especiesSeleccionadas}</span>}{' '}
+        Especies {especieSeleccionada && <span className="opcionSeleccionada">{especieSeleccionada}</span>}{' '}
         <FontAwesomeIcon icon={faCaretDown} />
         {estaListaAnimalesAbierta ? (
           <ul className="listaFiltro">
             <li
-              className={`elementoListaFiltro ${especiesSeleccionadas.includes('Perro') ? 'seleccionado' : ''}`}
+              className={`elementoListaFiltro ${especieSeleccionada.includes('Perro') ? 'seleccionado' : ''}`}
               onClick={() => manejarClicAnimal('Perro')}
             >
               Perros
             </li>
             <li
-              className={`elementoListaFiltro ${especiesSeleccionadas.includes('Gato') ? 'seleccionado' : ''}`}
+              className={`elementoListaFiltro ${especieSeleccionada.includes('Gato') ? 'seleccionado' : ''}`}
               onClick={() => manejarClicAnimal('Gato')}
             >
               Gatos
@@ -83,24 +83,24 @@ const Filtro = ({ onClick, onClearFilters }) => {
 
       {/* Filtro de tamaño */}
       <button className="campoFiltro" onClick={alternarListaTamanos}>
-        Tamaño {tamanosSeleccionados && <span className="opcionSeleccionada"></span>}{' '}
+        Tamaño {tamanoSeleccionado && <span className="opcionSeleccionada">{tamanoSeleccionado}</span>}{' '}
         <FontAwesomeIcon icon={faCaretDown} />
         {estaListaTamanosAbierta ? (
           <ul className="listaFiltro">
             <li
-              className={`elementoListaFiltro ${tamanosSeleccionados.includes('Pequeño') ? 'seleccionado' : ''}`}
+              className={`elementoListaFiltro ${tamanoSeleccionado.includes('Pequeño') ? 'seleccionado' : ''}`}
               onClick={() => manejarClicTamano('Pequeño')}
             >
               Pequeño
             </li>
             <li
-              className={`elementoListaFiltro ${tamanosSeleccionados.includes('Mediano') ? 'seleccionado' : ''}`}
+              className={`elementoListaFiltro ${tamanoSeleccionado.includes('Mediano') ? 'seleccionado' : ''}`}
               onClick={() => manejarClicTamano('Mediano')}
             >
               Mediano
             </li>
             <li
-              className={`elementoListaFiltro ${tamanosSeleccionados.includes('Grande') ? 'seleccionado' : ''}`}
+              className={`elementoListaFiltro ${tamanoSeleccionado.includes('Grande') ? 'seleccionado' : ''}`}
               onClick={() => manejarClicTamano('Grande')}
             >
               Grande
@@ -111,18 +111,18 @@ const Filtro = ({ onClick, onClearFilters }) => {
 
       {/* Filtro de edad */}
       <button className="campoFiltro" onClick={alternarListaEdades}>
-        Edad {edadesSeleccionadas && <span className="opcionSeleccionada"></span>}{' '}
+        Edad {edadSeleccionada && <span className="opcionSeleccionada">{edadSeleccionada}</span>}{' '}
         <FontAwesomeIcon icon={faCaretDown} />
         {estaListaEdadesAbierta ? (
           <ul className="listaFiltro">
             <li
-              className={`elementoListaFiltro ${edadesSeleccionadas.includes('Cachorrito') ? 'seleccionado' : ''}`}
+              className={`elementoListaFiltro ${edadSeleccionada.includes('Cachorrito') ? 'seleccionado' : ''}`}
               onClick={() => manejarClicEdad('Cachorrito')}
             >
               Cachorrito
             </li>
             <li
-              className={`elementoListaFiltro ${edadesSeleccionadas.includes('Adulto') ? 'seleccionado' : ''}`}
+              className={`elementoListaFiltro ${edadSeleccionada.includes('Adulto') ? 'seleccionado' : ''}`}
               onClick={() => manejarClicEdad('Adulto')}
             >
               Adulto

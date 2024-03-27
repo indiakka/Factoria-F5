@@ -3,27 +3,25 @@
     display: flex;
     left: 50%;
     transform: translateX(-50%);
-    margin-top: 300px;
+    margin: 1rem 0;
 }
 
 .paginacion button {
     margin: 0 5px;
     padding: 5px 10px;
     border: 1px solid #ccc;
-    background-color: var(--text-color);
+    background-color: var(--color-texto);
     cursor: pointer;
 }
 
 .paginacion button:hover {
-    background-color: var(--main-color);
+    background-color: var(--color-principal);
 }
 
 .paginacion .active {
-    background-color: var(--main-color-light);
+    background-color: var(--color-principal-claro);
     color: #fff;
 }
-
-
 
 @media only screen and (max-width: 768px) {
     .paginacion {

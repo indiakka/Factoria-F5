@@ -12,15 +12,15 @@ const Footer = () =>
       <div className='footer-segundo-bloque'>
         <div className='footer-nav-descubrir'>
           <h3>Descubrir</h3>
-          <p className='efecto-rosa'>Cómo funciona</p>
-          <p className='efecto-rosa'><NavLink to='/Adoptar'>Adopta</NavLink></p>
-          <p className='efecto-rosa'><NavLink to='/Donar'>Dona</NavLink></p>
+          <p className='efecto-claro'>Cómo funciona</p>
+          <p className='efecto-claro'><NavLink to='/Adoptar'>Adopta</NavLink></p>
+          <p className='efecto-claro'><NavLink to='/Donar'>Dona</NavLink></p>
         </div>
         <div className='footer-nav-info'>
           <h3>Info</h3>
-          <p className='efecto-rosa'>Sobre nosotros</p>
-          <p className='efecto-rosa'>FAQ</p>
-          <p className='efecto-rosa'>Contactar</p>
+          <p className='efecto-claro'>Sobre nosotros</p>
+          <p className='efecto-claro'>FAQ</p>
+          <p className='efecto-claro'>Contactar</p>
         </div>
         <div className='footer-redes-sociales'>
           <h3>
