@@ -38,11 +38,11 @@ const Casita = () =>
   };
 
   return (
-    <div id='contenedor-casita' className='contenedor-casita-card'>
+    <div id='contenedor-casita' className='contenedor-casita-tarjeta'>
       {casita.map( ( a ) => (
-        <div key={a.id} className='casita-card'>
-          <div className='contenedor-x-card'>
-            <img src='src/assets/images/x_card.svg' onClick={e => eliminarAnimal( a.id )} className='x-card' alt='descartar-animal' />
+        <div key={a.id} className='casita-tarjeta'>
+          <div className='contenedor-x-tarjeta'>
+            <img src='src/assets/images/x_tarjeta.svg' onClick={e => eliminarAnimal( a.id )} className='x-tarjeta' alt='descartar-animal' />
           </div>
           <img className='casita-imagen'
             src={a.imagen}
@@ -50,7 +50,7 @@ const Casita = () =>
           />
           <div className='casita-texto'>
             <h4>{a.nombre}</h4>
-            <h5>{a.años},{a.ubicacion}</h5>
+            <h5>{a.edad},{a.ubicacion}</h5>
           </div>
         </div>
       ) )}
