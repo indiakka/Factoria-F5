@@ -51,12 +51,12 @@
   transition: all 0.3s ease-in-out;
 }
 
-.tarjeta:hover .animalInfoTxt--container,
+.tarjeta:hover .contenedor--texto--animalInfo,
 .tarjeta:hover .tarjeta--componentes--descripcion strong {
   color: var(--color-principal-claro);
 }
 
-.tarjeta:hover .tarjeta--componentes--nombre{
+.tarjeta:hover .tarjeta--componentes--nombre {
   color: var(--color-principal);
 }
 
